@@ -114,16 +114,18 @@
   <div class="balloon-container">
     <!-- Generate 10 floating balloons -->
     <script>
-  const container = document.querySelector('.balloon-container');
-  for (let i = 0; i < 20; i++) {
-    const img = document.createElement('img');
-    img.src = 'balloons.png';
-    img.className = 'balloon';
-    img.style.left = Math.random() * 100 + 'vw';
-    img.style.animationDelay = Math.random() * 5 + 's';
-    img.style.top = '100vh';
-    container.appendChild(img);
-  }
+  window.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.balloon-container');
+    for (let i = 0; i < 20; i++) {
+      const img = document.createElement('img');
+      img.src = 'balloons.png';
+      img.className = 'balloon';
+      img.style.left = Math.random() * 100 + 'vw';
+      img.style.animationDelay = Math.random() * 5 + 's';
+      img.style.top = '100vh';
+      container.appendChild(img);
+    }
+  });
 </script>
   </div>
 
