@@ -107,22 +107,24 @@
 <body>
 
   <audio autoplay loop>
-  <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Monplaisir/Christmas/Monplaisir_-_02_-_Little_Happy_Birthday.mp3" type="audio/mp3">
+  <source src="https://assets.codepen.io/6093409/birthday-song.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
   <div class="balloon-container">
     <!-- Generate 10 floating balloons -->
     <script>
-      for (let i = 0; i < 10; i++) {
-        const img = document.createElement('img');
-        img.src = 'balloons.png';
-        img.className = 'balloon';
-        img.style.left = Math.random() * 100 + 'vw';
-        img.style.animationDelay = Math.random() * 5 + 's';
-        document.body.querySelector('.balloon-container').appendChild(img);
-      }
-    </script>
+  const container = document.querySelector('.balloon-container');
+  for (let i = 0; i < 20; i++) {
+    const img = document.createElement('img');
+    img.src = 'balloons.png';
+    img.className = 'balloon';
+    img.style.left = Math.random() * 100 + 'vw';
+    img.style.animationDelay = Math.random() * 5 + 's';
+    img.style.top = '100vh';
+    container.appendChild(img);
+  }
+</script>
   </div>
 
   <h1>🎂 Happy Birthday Shreya! 🎂</h1>
