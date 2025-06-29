@@ -2,90 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Happy Birthday Shreya</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Shreya</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: #000;
+      background: linear-gradient(to bottom, #1f0036, #3c005a);
       color: #fff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-x: hidden;
       text-align: center;
-      overflow: hidden;
     }
-    .container {
-      padding: 20px;
-      max-width: 600px;
-      margin: 0 auto;
-      animation: fadeIn 2s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
+
+    audio {
+      display: none;
     }
 
     .balloons {
-      width: 200px;
-      margin-top: 20px;
-      animation: float 6s infinite ease-in-out;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-30px); }
-      100% { transform: translateY(0); }
-    }
-
-    .cake {
-      width: 180px;
-      margin: 30px auto 20px;
-      animation: bounce 2s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+      width: 100%;
+      height: 100vh;
+      background: url('https://i.imgur.com/rVZnEJP.gif') center/contain no-repeat;
+      background-size: 300px;
+      animation: fadeIn 2s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     h1 {
       font-size: 2.5em;
-      color: #FFD700;
-      margin: 20px 0;
-      animation: fadeIn 2.5s ease-in;
+      color: #FF69B4;
+      margin-top: 30px;
+      animation: popIn 1.5s ease forwards;
     }
 
-    p {
+    .cake {
+      width: 180px;
+      margin: 20px auto;
+      animation: bounce 2s infinite;
+    }
+
+    .message {
+      max-width: 700px;
+      margin: 30px auto;
       font-size: 1.1em;
-      padding: 0 15px;
+      padding: 0 20px;
       text-align: left;
       white-space: pre-wrap;
-      animation: fadeIn 3s ease-in;
+      animation: fadeInText 2.5s ease-in;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInText {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <img class="balloons" src="https://i.imgur.com/rVZnEJP.gif" alt="Balloons">
-    <h1>🎂 Happy Birthday Shreya! 🎂</h1>
-    <img class="cake" src="https://i.imgur.com/7Z8qHQc.png" alt="Cake">
-    <p>
-Happy Birthday, Shreya ❤️
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 
-I wish more than anything that I could be with you today. It hurts that I can’t be there to hold your hand, see your smile, and celebrate this special day together. I’m truly sorry for that.
+  <div class="balloons"></div>
+  <h1>🎂 Happy Birthday Shreya! 🎂</h1>
+  <img class="cake" src="https://i.imgur.com/zI8f7Ns.png" alt="Cake">
 
-Even though I’m not there in person, my heart is with you every moment. You've been my biggest support, my best friend, and the love of my life for 8 beautiful years. And still, every day, I find new reasons to love you even more.
+  <div class="message">
+    Happy Birthday, Shreya ❤️
 
-Thank you for being by my side, for loving me endlessly, and for making life so full of meaning. You are the most important person in my life, and I love you more than words can ever fully express.
+    I wish more than anything that I could be with you today. It hurts that I can’t be there to hold your hand, see your smile, and celebrate this special day together. I’m truly sorry for that.
 
-I hope today brings you happiness, love, and everything your heart wishes for. And I promise, we’ll make up for this day soon — together.
+    Even though I’m not there in person, my heart is with you every moment. You've been my biggest support, my best friend, and the love of my life for 8 beautiful years. And still, every day, I find new reasons to love you even more.
 
-I love you so much, Shreya. Always and forever.
+    Thank you for being by my side, for loving me endlessly, and for making life so full of meaning. You are the most important person in my life, and I love you more than words can ever fully express.
 
-— Yours only,  
-Arnab
-    </p>
+    I hope today brings you happiness, love, and everything your heart wishes for. And I promise, we’ll make up for this day soon — together.
+
+    I love you so much, Shreya. Always and forever.
+
+    — Yours only,
+    Arnab
   </div>
 
 </body>
