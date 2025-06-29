@@ -111,7 +111,9 @@
   Your browser does not support the audio element.
 </audio>
 
-  <div class="balloon-container"></div>
+  <div class="balloon-container">
+  <!-- Balloon images will be dynamically added here -->
+</div>
 
 <script>
   window.addEventListener('DOMContentLoaded', () => {
@@ -119,7 +121,7 @@
     if (!container) return;
     for (let i = 0; i < 20; i++) {
       const img = document.createElement('img');
-      img.src = 'balloons.png';
+      img.src = './balloons.png';
       img.className = 'balloon';
       img.style.left = Math.random() * 100 + 'vw';
       img.style.animationDelay = Math.random() * 5 + 's';
