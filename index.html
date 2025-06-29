@@ -77,4 +77,75 @@
       padding: 15px;
       text-align: left;
       white-space: pre-wrap;
-      animation
+      animation: fadeInText 2.5s ease-in;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    @keyframes fadeInText {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @media (min-width: 600px) {
+      h1 { font-size: 2.5em; }
+      .cake { width: 200px; }
+      .message { font-size: 1.1em; max-width: 700px; }
+    }
+  </style>
+</head>
+<body>
+
+  <audio autoplay loop>
+  <source src="https://assets.codepen.io/6093409/birthday-song.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+  <div class="balloon-container">
+    <!-- Generate 10 floating balloons -->
+    <script>
+  const container = document.querySelector('.balloon-container');
+  for (let i = 0; i < 20; i++) {
+    const img = document.createElement('img');
+    img.src = 'https://i.postimg.cc/jqYvvGJK/balloon.png';
+    img.className = 'balloon';
+    img.style.left = Math.random() * 100 + 'vw';
+    img.style.animationDelay = Math.random() * 5 + 's';
+    img.style.top = '100vh';
+    container.appendChild(img);
+  }
+</script>
+  </div>
+
+  <h1>🎂 Happy Birthday Shreya! 🎂</h1>
+  <img class="cake" src="https://i.postimg.cc/J7YZ1X8h/cake.png" alt="Cake">
+
+  <div class="message">
+    Happy Birthday, Shreya ❤️
+
+    I wish more than anything that I could be with you today. It hurts that I can’t be there to hold your hand, see your smile, and celebrate this special day together. I’m truly sorry for that.
+
+    Even though I’m not there in person, my heart is with you every moment. You've been my biggest support, my best friend, and the love of my life for 8 beautiful years. And still, every day, I find new reasons to love you even more.
+
+    Thank you for being by my side, for loving me endlessly, and for making life so full of meaning. You are the most important person in my life, and I love you more than words can ever fully express.
+
+    I hope today brings you happiness, love, and everything your heart wishes for. And I promise, we’ll make up for this day soon — together.
+
+    I love you so much, Shreya. Always and forever.
+
+    — Yours only,
+    Arnab
+  </div>
+
+</body>
+</html>
