@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday Shreya</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -33,7 +37,7 @@
 
     .balloon {
       position: absolute;
-      width: 80px;
+      width: 60px;
       animation: floatUp 8s linear infinite;
       opacity: 0.8;
     }
@@ -53,29 +57,29 @@
     }
 
     h1 {
-      font-size: 2.5em;
+      font-size: 2em;
       color: #FF69B4;
-      margin-top: 30px;
+      margin-top: 60px;
       animation: popIn 1.5s ease forwards;
+      padding: 0 10px;
     }
 
     .cake {
-      width: 200px;
+      width: 150px;
       margin: 20px auto;
       animation: bounce 2s infinite;
     }
 
     .message {
-      max-width: 700px;
-      margin: 30px auto;
-      font-size: 1.1em;
-      padding: 0 20px;
+      max-width: 90%;
+      margin: 20px auto;
+      font-size: 1em;
+      padding: 15px;
       text-align: left;
       white-space: pre-wrap;
       animation: fadeInText 2.5s ease-in;
       background: rgba(255, 255, 255, 0.05);
       border-radius: 12px;
-      padding: 20px;
     }
 
     @keyframes bounce {
@@ -92,6 +96,12 @@
       0% { transform: scale(0.5); opacity: 0; }
       100% { transform: scale(1); opacity: 1; }
     }
+
+    @media (min-width: 600px) {
+      h1 { font-size: 2.5em; }
+      .cake { width: 200px; }
+      .message { font-size: 1.1em; max-width: 700px; }
+    }
   </style>
 </head>
 <body>
@@ -106,7 +116,7 @@
     <script>
       for (let i = 0; i < 10; i++) {
         const img = document.createElement('img');
-        img.src = 'kisspng-balloon-birthday-clip-art-image-portable-network-g-1713907277925.png';
+        img.src = 'kisspng-balloon-birthday-clip-art-image-portable-network-g-1713907277925-removebg-preview';
         img.className = 'balloon';
         img.style.left = Math.random() * 100 + 'vw';
         img.style.animationDelay = Math.random() * 5 + 's';
@@ -116,7 +126,7 @@
   </div>
 
   <h1>🎂 Happy Birthday Shreya! 🎂</h1>
-  <img class="cake" src="transparent-birthday-cake-red-hat-blue-shirt-blue-1710959877683.png" alt="Cake">
+  <img class="cake" src="transparent-birthday-cake-red-hat-blue-shirt-blue-1710959877683-removebg-preview" alt="Cake">
 
   <div class="message">
     Happy Birthday, Shreya ❤️
