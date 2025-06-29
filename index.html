@@ -2,53 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Happy Birthday, Shreya!</title>
+  <title>Happy Birthday Shreya</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: black;
+      background-color: #000;
       color: #fff;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
-      overflow-x: hidden;
+      overflow: hidden;
     }
     .container {
       padding: 20px;
       max-width: 600px;
-      margin: auto;
-    }
-    .balloons {
-      width: 100%;
-      max-width: 400px;
       margin: 0 auto;
-      display: block;
+      animation: fadeIn 2s ease-in-out;
     }
-    h1 {
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .balloons {
+      width: 200px;
       margin-top: 20px;
+      animation: float 6s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-30px); }
+      100% { transform: translateY(0); }
+    }
+
+    .cake {
+      width: 180px;
+      margin: 30px auto 20px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    h1 {
       font-size: 2.5em;
       color: #FFD700;
+      margin: 20px 0;
+      animation: fadeIn 2.5s ease-in;
     }
-    .cake {
-      width: 80%;
-      max-width: 300px;
-      margin: 10px auto;
-      display: block;
-    }
+
     p {
-      margin-top: 20px;
-      line-height: 1.5;
       font-size: 1.1em;
+      padding: 0 15px;
       text-align: left;
       white-space: pre-wrap;
+      animation: fadeIn 3s ease-in;
     }
   </style>
 </head>
 <body>
+
   <div class="container">
     <img class="balloons" src="https://i.imgur.com/rVZnEJP.gif" alt="Balloons">
-    <h1>🎂 Happy Birthday, Shreya! 🎂</h1>
+    <h1>🎂 Happy Birthday Shreya! 🎂</h1>
     <img class="cake" src="https://i.imgur.com/7Z8qHQc.png" alt="Cake">
     <p>
 Happy Birthday, Shreya ❤️
@@ -63,9 +83,10 @@ I hope today brings you happiness, love, and everything your heart wishes for. A
 
 I love you so much, Shreya. Always and forever.
 
-— Yours only,
+— Yours only,  
 Arnab
     </p>
   </div>
+
 </body>
 </html>
